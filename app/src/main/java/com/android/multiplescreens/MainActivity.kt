@@ -113,7 +113,10 @@ class MainActivity : AppCompatActivity() {
                 val options = ActivityOptions.makeBasic()
                 // Select the display screen that you want to show the second activity
                 options.launchDisplayId = displays[1].displayId
-                startActivity(Intent(this@MainActivity, SecondActivity::class.java), options.toBundle())
+                startActivity(
+                    Intent(this@MainActivity, SecondActivity::class.java),
+                    options.toBundle()
+                )
             }
         }
     }
