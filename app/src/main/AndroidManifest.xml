@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
 
+        <!-- See about the taskAffinity attribute at http://bit.ly/34RKvzC -->
         <activity
             android:name=".SecondActivity"
             android:launchMode="singleTask"

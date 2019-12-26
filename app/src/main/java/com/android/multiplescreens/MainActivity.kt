@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.lge.display.DisplayManagerHelper
 
@@ -113,11 +114,16 @@ class MainActivity : AppCompatActivity() {
                 val options = ActivityOptions.makeBasic()
                 // Select the display screen that you want to show the second activity
                 options.launchDisplayId = displays[1].displayId
+                // To display on the second screen that your intent must be set flag to make
+                // single task (combine FLAG_ACTIVITY_CLEAR_TOP and FLAG_ACTIVITY_NEW_TASK)
+                // or you also set it in the manifest (see more at the manifest file)
                 startActivity(
                     Intent(this@MainActivity, SecondActivity::class.java),
                     options.toBundle()
                 )
             }
+        } else {
+            Toast.makeText(this, "Not found the second screen", Toast.LENGTH_SHORT).show()
         }
     }
 

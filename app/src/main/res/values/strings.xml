@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MultipleScreens</string>
+    <string name="app_name">Multiple Screens</string>
     <string name="second_screen">Second screen</string>
     <string name="display_the_second_screen">Display the second screen</string>
 </resources>
