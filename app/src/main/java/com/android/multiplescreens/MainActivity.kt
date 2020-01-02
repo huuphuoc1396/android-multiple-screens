@@ -12,13 +12,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.lge.display.DisplayManagerHelper
 
-/*
-* The first activity is displayed.
-* You can display the second screen by tapping the button
-* */
+/**
+ * The first activity is displayed.
+ * You can display the second screen by tapping the button
+ */
 class MainActivity : AppCompatActivity() {
 
-    // DisplayManagerHelper is a SDK provided by LG
+    // DisplayManagerHelper is a class provided by LG SDK
     // which support to track events related to dual screens on LG V50.
     // See more at http://mobile.developer.lge.com/develop/sdks/lg-dual-screen-sdk/
     private var displayManagerHelper: DisplayManagerHelper? = null
@@ -67,12 +67,12 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    /*
-    * Convert cover display states to string to serve for logging
-    *
-    * @param state is the value integer of state
-    * @return a string for this state
-    * */
+    /**
+     * Convert cover display states to string to serve for logging
+     *
+     * @param state is the value integer of state
+     * @return a string for this state
+     */
     private fun coverDisplayStateToString(state: Int): String {
         return when (state) {
             DisplayManagerHelper.STATE_UNMOUNT -> "STATE_UNMOUNT"
@@ -82,12 +82,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*
-    * Convert smart cover display states to string to serve for logging
-    *
-    * @param state is the value integer of state
-    * @return a string for this state
-    * */
+    /**
+     * Convert smart cover display states to string to serve for logging
+     *
+     * @param state is the value integer of state
+     * @return a string for this state
+     */
     private fun smartCoverStateToString(state: Int): String {
         return when (state) {
             DisplayManagerHelper.STATE_COVER_OPENED -> "STATE_COVER_OPENED"
@@ -97,10 +97,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*
-    * Navigate to the second screen.
-    * See more at https://developer.android.com/guide/topics/ui/foldables?#using_secondary_screens
-    * */
+    /**
+     * Navigate to the second screen.
+     *
+     * See more at https://developer.android.com/guide/topics/ui/foldables?#using_secondary_screens
+     */
     private fun toSecondScreen() {
         // DisplayManager manages the properties of attached displays.
         val displayManager = getSystemService(Context.DISPLAY_SERVICE) as DisplayManager
