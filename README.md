@@ -16,4 +16,4 @@ The LG Dual Screen is a mobile handset with two screens. Independent application
 ![](https://github.com/huuphuoc1396/MultipleScreens/blob/master/images/LG%20Dual%20Screen.png)
 
 ## Testing
-[Multi displays support](https://androidstudio.googleblog.com/2019/08/emulator-29110-canary-android-q-beta-6.html) has had since Emulator 29.1.10 Canary.
+[Multi displays support](https://developer.android.com/studio/releases#multi-display_support)
